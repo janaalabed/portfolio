@@ -1,6 +1,10 @@
 export default function Footer() {
-    return (
-        <>
-        </>
-    );
+  return (
+      <>
+        
+      <div>
+        <p>copyright Jana Al Abed</p>
+      </div>
+    </>
+  );
 }
