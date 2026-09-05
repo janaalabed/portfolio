@@ -4,6 +4,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Experience from "./components/Experience";
 
 export default function Portfolio() {
   return (
@@ -15,6 +16,7 @@ export default function Portfolio() {
         <Skills />
         <Contact />
         <Footer />
+        <Experience />
       </div>
     </>
   );
