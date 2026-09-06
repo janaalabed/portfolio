@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 export default function Hero() {
   return (
@@ -9,7 +10,7 @@ export default function Hero() {
     >
       <div className="flex-1 text-center md:text-left">
         <p className="mb-4 font-mono text-label text-primary">
-          {"> Full-stack developer"}
+          {"> full-stack developer"}
         </p>
         <h1 className="font-heading text-hero font-semibold text-foreground">
           Jana Al Abed
@@ -19,13 +20,15 @@ export default function Hero() {
           schema to deployed UI — React, ASP.NET Core, PostgreSQL.
         </p>
         <div className="mt-8">
-          <Button
-            asChild
-            size="lg"
-            className="bg-primary text-primary-foreground hover:bg-primary/90"
+          <a
+            href="#projects"
+            className={cn(
+              buttonVariants({ size: "lg" }),
+              "bg-primary text-primary-foreground hover:bg-primary/90",
+            )}
           >
-            <a href="#projects">View my projects</a>
-          </Button>
+            View my projects
+          </a>
         </div>
       </div>
 

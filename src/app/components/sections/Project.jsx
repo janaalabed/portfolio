@@ -14,9 +14,9 @@ export default function Project() {
   return (
     <section id="projects" className="border-t border-border py-12 md:py-24">
       <div className="mx-auto max-w-[1200px] px-6">
-        <h2 className="font-heading text-h2 font-semibold text-foreground">
+        <h1 className="font-heading text-h3 font-semibold text-foreground">
           Projects
-        </h2>
+        </h1>
 
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((item, index) => (
@@ -53,12 +53,14 @@ export default function Project() {
                 </div>
 
                 <div className="mt-6 flex gap-4">
-                  <a
-                    href={item.liveDemo}
-                    className="flex items-center gap-1 text-label text-primary hover:underline"
-                  >
-                    <ExternalLink size={14} /> Live demo
-                  </a>
+                  {item.liveDemo && (
+                    <a
+                      href={item.liveDemo}
+                      className="flex items-center gap-1 text-label text-primary hover:underline"
+                    >
+                      <ExternalLink size={14} /> Live demo
+                    </a>
+                  )}
                   <a
                     href={item.githubRepo}
                     className="flex items-center gap-1 text-label text-muted-foreground hover:text-primary"

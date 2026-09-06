@@ -20,7 +20,7 @@ export default function Navbar() {
       <nav className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-6">
         <a
           href="#hero"
-          className="font-heading text-lg font-semibold text-foreground"
+          className="font-heading text-h1 font-semibold text-foreground"
         >
           Jana Al Abed
         </a>

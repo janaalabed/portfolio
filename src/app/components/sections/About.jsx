@@ -1,4 +1,5 @@
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { Download } from "lucide-react";
 
 export default function About() {
@@ -33,16 +34,17 @@ export default function About() {
           trace a bug through every layer it touches, not just the one where it
           surfaces.
         </p>
-        <Button
-          asChild
-          variant="outline"
-          className="mt-8 border-border text-foreground hover:bg-accent hover:text-primary"
+        <a
+          href="/resume/Jana AL Abed CV.pdf"
+          download="Jana Al Abed CV"
+          className={cn(
+            buttonVariants({ variant: "outline" }),
+            "mt-8 border-border text-foreground hover:bg-accent hover:text-primary",
+          )}
         >
-          <a href="/resume/Jana AL Abed CV.pdf" download="Jana Al Abed CV">
-            <Download className="mr-2 h-4 w-4" />
-            Download CV
-          </a>
-        </Button>
+          <Download className="mr-2 h-4 w-4" />
+          Download CV
+        </a>
       </div>
     </section>
   );

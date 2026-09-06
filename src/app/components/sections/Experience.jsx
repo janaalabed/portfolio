@@ -4,9 +4,9 @@ export default function Experience() {
   return (
     <section id="experience" className="py-12 md:py-24">
       <div className="mx-auto max-w-[1200px] px-6">
-        <h2 className="font-heading text-h2 font-semibold text-foreground">
+        <h1 className="font-heading text-h3 font-semibold text-foreground">
           Experience
-        </h2>
+        </h1>
 
         <div className="mt-12 space-y-12 border-l border-border pl-8">
           {experiences.map((item, index) => (

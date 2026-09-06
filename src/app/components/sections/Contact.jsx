@@ -44,9 +44,9 @@ export default function Contact() {
     <section id="contact" className="border-t border-border py-12 md:py-24">
       <div className="mx-auto grid max-w-[1200px] gap-12 px-6 md:grid-cols-2">
         <div>
-          <h2 className="font-heading text-h2 font-semibold text-foreground">
+          <h1 className="font-heading text-h3 font-semibold text-foreground">
             Let&apos;s connect
-          </h2>
+          </h1>
           <p className="mt-4 text-body text-muted-foreground">
             Interested in working together?
           </p>

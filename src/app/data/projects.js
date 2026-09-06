@@ -5,7 +5,6 @@ const projects = [
     description:
       "An IT Help Desk & Ticketing Management System for managing support requests, ticket workflows, role-based access, and internal IT operations",
     stack: ["React", "Tailwind CSS", "ASP.NET Web Api", "Entity Framework"],
-    liveDemo: "https://jobify-bice-five.vercel.app/",
     githubRepo:
       "https://github.com/janaalabed/it-helpdesk-ticketing-system.git",
   },
