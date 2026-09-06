@@ -1,26 +1,88 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Base surfaces */
+  --background: #0B0F14;
+  --foreground: #E8EAED;
+
+  --card: #131820;
+  --card-foreground: #E8EAED;
+
+  --popover: #1A212B;
+  --popover-foreground: #E8EAED;
+
+  /* Accents */
+  --primary: #22D3EE;
+  --primary-foreground: #0B0F14;
+
+  --secondary: #8B5CF6;
+  --secondary-foreground: #E8EAED;
+
+  --success: #34D399;
+
+  /* Text */
+  --muted: #1A212B;
+  --muted-foreground: #9BA3AF;
+  --accent: #1A212B;
+  --accent-foreground: #22D3EE;
+
+  --destructive: #EF4444;
+  --destructive-foreground: #E8EAED;
+
+  --border: #232B36;
+  --input: #232B36;
+  --ring: #22D3EE;
+
+  --radius: 0.75rem;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-success: var(--success);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* Fonts — wired to next/font variables set in layout.js */
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-space-grotesk);
+  --font-mono: var(--font-jetbrains-mono);
+
+  /* Type scale from the design spec */
+  --font-size-hero: 3.5rem;
+  --font-size-hero--line-height: 1.1;
+  --font-size-h2: 2rem;
+  --font-size-h2--line-height: 1.25;
+  --font-size-h3: 1.25rem;
+  --font-size-h3--line-height: 1.4;
+  --font-size-body: 1rem;
+  --font-size-body--line-height: 1.7;
+  --font-size-label: 0.875rem;
+  --font-size-label--line-height: 1.5;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
