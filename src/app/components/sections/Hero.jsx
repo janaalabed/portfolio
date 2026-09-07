@@ -6,40 +6,40 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="mx-auto flex max-w-[1200px] flex-col-reverse items-center gap-12 px-6 pb-24 pt-32 md:flex-row md:pt-40"
+      className="mx-auto flex max-w-[1200px] flex-col items-center gap-3 px-6 pb-24 pt-32 text-center md:pt-40"
     >
-      <div className="flex-1 text-center md:text-left">
-        <p className="mb-4 font-mono text-label text-primary">
-          {"> full-stack developer"}
-        </p>
-        <h1 className="font-heading text-hero font-semibold text-foreground">
-          Jana Al Abed
-        </h1>
-        <p className="mx-auto mt-6 max-w-lg text-body text-muted-foreground md:mx-0">
-          Full-stack developer building production-grade web apps from database
-          schema to deployed UI — React, ASP.NET Core, PostgreSQL.
-        </p>
-        <div className="mt-8">
-          <a
-            href="#projects"
-            className={cn(
-              buttonVariants({ size: "lg" }),
-              "bg-primary text-primary-foreground hover:bg-primary/90",
-            )}
-          >
-            My projects
-          </a>
+      <div className="flex items-center gap-4 opacity-0 animate-fade-up">
+        <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full border border-border">
+          <Image
+            fill
+            alt="Jana Al Abed"
+            src="/images/personalPhoto.jpeg"
+            className="object-cover scale-125"
+          />
         </div>
+        <span className="font-mono text-body text-muted-foreground">
+          Jana Al Abed
+        </span>
       </div>
 
-      <div className="relative h-40 w-40 shrink-0 overflow-hidden rounded-2xl border border-border md:h-56 md:w-56">
-        <Image
-          fill
-          alt="Jana Al Abed"
-          src="/images/personalPhoto.jpg"
-          className="object-cover"
-        />
-      </div>
+      <h1 className="font-heading text-hero font-semibold text-foreground opacity-0 animate-fade-up [animation-delay:150ms]">
+        Full-stack developer
+      </h1>
+
+      <p className="max-w-lg text-body text-muted-foreground opacity-0 animate-fade-up [animation-delay:300ms]">
+        Building production-grade web apps from database schema to deployed UI —
+        React, ASP.NET Core, PostgreSQL.
+      </p>
+
+      <a
+        href="#projects"
+        className={cn(
+          buttonVariants({ size: "lg" }),
+          "bg-primary text-primary-foreground hover:bg-primary/90 opacity-0 animate-fade-up [animation-delay:450ms]",
+        )}
+      >
+        My projects
+      </a>
     </section>
   );
 }

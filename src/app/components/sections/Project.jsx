@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
+import Reveal from "../../../components/Reveal";
 import projects from "../../data/projects";
 
 function GithubIcon(props) {
@@ -20,56 +21,55 @@ export default function Project() {
 
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((item, index) => (
-            <div
-              key={index}
-              className="flex flex-col overflow-hidden rounded-xl border border-border bg-card"
-            >
-              <div className="relative h-44 w-full">
-                <Image
-                  src={item.imageURL}
-                  alt={item.Name}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
-              <div className="flex flex-1 flex-col p-6">
-                <h3 className="font-heading text-h3 font-medium text-foreground">
-                  {item.Name}
-                </h3>
-                <p className="mt-2 flex-1 text-body text-muted-foreground">
-                  {item.description}
-                </p>
-
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {item.stack.map((stackItem, i) => (
-                    <span
-                      key={i}
-                      className="rounded-full bg-secondary/15 px-3 py-1 text-label text-primary"
-                    >
-                      {stackItem}
-                    </span>
-                  ))}
+            <Reveal key={index} delay={index * 100}>
+              <div className="flex h-full flex-col overflow-hidden rounded-xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <div className="relative h-44 w-full">
+                  <Image
+                    src={item.imageURL}
+                    alt={item.Name}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
 
-                <div className="mt-6 flex gap-4">
-                  {item.liveDemo && (
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="font-heading text-h3 font-medium text-foreground">
+                    {item.Name}
+                  </h3>
+                  <p className="mt-2 flex-1 text-body text-muted-foreground">
+                    {item.description}
+                  </p>
+
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {item.stack.map((stackItem, i) => (
+                      <span
+                        key={i}
+                        className="rounded-full bg-secondary/15 px-3 py-1 text-label text-secondary"
+                      >
+                        {stackItem}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-6 flex gap-4">
+                    {item.liveDemo && (
+                      <a
+                        href={item.liveDemo}
+                        className="flex items-center gap-1 text-label text-primary hover:underline"
+                      >
+                        <ExternalLink size={14} /> Live demo
+                      </a>
+                    )}
                     <a
-                      href={item.liveDemo}
-                      className="flex items-center gap-1 text-label text-secondary hover:underline"
+                      href={item.githubRepo}
+                      className="flex items-center gap-1 text-label text-muted-foreground hover:text-primary"
                     >
-                      <ExternalLink size={14} /> Live demo
+                      <GithubIcon className="h-3.5 w-3.5" /> Source Code
                     </a>
-                  )}
-                  <a
-                    href={item.githubRepo}
-                    className="flex items-center gap-1 text-label text-muted-foreground hover:text-secondary"
-                  >
-                    <GithubIcon className="h-3.5 w-3.5" /> Source Code
-                  </a>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
