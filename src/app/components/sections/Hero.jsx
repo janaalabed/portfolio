@@ -27,7 +27,7 @@ export default function Hero() {
               "bg-primary text-primary-foreground hover:bg-primary/90",
             )}
           >
-            View my projects
+            My projects
           </a>
         </div>
       </div>

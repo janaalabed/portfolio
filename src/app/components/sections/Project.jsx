@@ -45,7 +45,7 @@ export default function Project() {
                   {item.stack.map((stackItem, i) => (
                     <span
                       key={i}
-                      className="rounded-full bg-secondary/15 px-3 py-1 text-label text-secondary"
+                      className="rounded-full bg-secondary/15 px-3 py-1 text-label text-primary"
                     >
                       {stackItem}
                     </span>
@@ -56,16 +56,16 @@ export default function Project() {
                   {item.liveDemo && (
                     <a
                       href={item.liveDemo}
-                      className="flex items-center gap-1 text-label text-primary hover:underline"
+                      className="flex items-center gap-1 text-label text-secondary hover:underline"
                     >
                       <ExternalLink size={14} /> Live demo
                     </a>
                   )}
                   <a
                     href={item.githubRepo}
-                    className="flex items-center gap-1 text-label text-muted-foreground hover:text-primary"
+                    className="flex items-center gap-1 text-label text-muted-foreground hover:text-secondary"
                   >
-                    <GithubIcon className="h-3.5 w-3.5" /> Source
+                    <GithubIcon className="h-3.5 w-3.5" /> Source Code
                   </a>
                 </div>
               </div>

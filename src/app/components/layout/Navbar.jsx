@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/80 backdrop-blur">
-      <nav className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-6">
+      <nav className="mx-auto grid h-16 max-w-[1200px] grid-cols-[auto_1fr_auto] items-center px-6">
         <a
           href="#hero"
           className="font-heading text-h1 font-semibold text-foreground"
@@ -25,7 +25,7 @@ export default function Navbar() {
           Jana Al Abed
         </a>
 
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center justify-center gap-8 md:flex">
           {links.map((link) => (
             <li key={link.href}>
               <a
@@ -41,7 +41,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="text-foreground md:hidden"
+          className="text-foreground md:hidden justify-self-end"
           aria-label="Toggle menu"
         >
           {open ? <X size={22} /> : <Menu size={22} />}
