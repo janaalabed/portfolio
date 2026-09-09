@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const links = [
@@ -20,8 +21,15 @@ export default function Navbar() {
       <nav className="mx-auto grid h-14 max-w-[1200px] grid-cols-[auto_1fr_auto] items-center px-4 sm:h-16 sm:px-6">
         <a
           href="#hero"
-          className="truncate font-heading text-lg font-semibold text-foreground sm:text-xl md:text-h1"
+          className="flex items-center gap-2 truncate font-heading text-lg font-semibold text-foreground sm:text-xl md:text-h1"
         >
+          <Image
+            src="/images/logo.png"
+            alt="Jana Al Abed logo"
+            width={32}
+            height={32}
+            className="h-14 w-14 shrink-0"
+          />
           Jana Al Abed
         </a>
 

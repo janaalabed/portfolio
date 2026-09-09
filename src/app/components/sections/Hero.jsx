@@ -28,7 +28,7 @@ export default function Hero() {
       </h1>
 
       <p className="max-w-lg text-body text-muted-foreground opacity-0 animate-fade-up [animation-delay:300ms]">
-        Building production-grade web apps from database schema to deployed UI —
+        Building production-grade web apps from database schema to deployed UI using
         React, ASP.NET Core, PostgreSQL.
       </p>
 
@@ -36,7 +36,7 @@ export default function Hero() {
         href="#projects"
         className={cn(
           buttonVariants({ size: "lg" }),
-          "bg-primary text-primary-foreground hover:bg-primary/90 opacity-0 animate-fade-up [animation-delay:450ms] w-full sm:w-auto",
+          "bg-primary text-primary-foreground hover:bg-primary/90 opacity-0 animate-fade-up [animation-delay:450ms] w-auto",
         )}
       >
         My projects
