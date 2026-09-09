@@ -5,7 +5,8 @@ import Skills from "./components/sections/Skills";
 import Contact from "./components/sections/Contact";
 import Footer from "./components/layout/Footer";
 import Experience from "./components/sections/Experience";
-import Project from "./components/sections/Project";
+import Projects from "./components/sections/Projects";
+import CurrentlyLearning from "./components/sections/CurrentlyLearning";
 
 export default function Portfolio() {
   return (
@@ -15,8 +16,9 @@ export default function Portfolio() {
         <Hero />
         <About />
         <Experience />
-        <Project />
         <Skills />
+        <CurrentlyLearning/>
+        <Projects />
         <Contact />
         <Footer />
       </div>

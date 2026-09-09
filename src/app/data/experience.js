@@ -3,6 +3,13 @@ const experiences = [
     startDate: "May 2026",
     endDate: "Jul 2026",
     companyName: "IDS",
+    stack: [
+      "ASP.NET Core",
+      "Entity Framework Core",
+      "PostgreSQL",
+      "JWT",
+      "React",
+    ],
     bullets: [
       "Built the complete backend for an IT Help Desk & Ticketing platform, including ticket CRUD, filtering, assignment, and escalation logic in ASP.NET Core, EF Core, and PostgreSQL, delivering a fully functional API layer capable of supporting the platform's core support workflows end-to-end",
       "Secured application access by implementing JWT-based authentication and custom role-based access control for 4 distinct user roles, which ensured protected resources and permission-based functionality",
@@ -14,6 +21,13 @@ const experiences = [
     startDate: "Jan 2026",
     endDate: "Mar 2026",
     companyName: "EFE Lebanon",
+    stack: [
+      "ASP.NET Core",
+      "Entity Framework Core",
+      "PostgreSQL",
+      "JWT",
+      "React",
+    ],
     bullets: [
       "Completed a 3-month cybersecurity apprenticeship (endorsed by the Lebanese IT Syndicate), applying core security principles to authentication flows, token-based access control, and data protection practices relevant to full-stack development",
       "Led a 4-member team through structured project milestones, coordinating tasks and timelines to ensure on-time delivery ",
@@ -25,6 +39,13 @@ const experiences = [
     startDate: "Nov 2025",
     endDate: "Dec 2025",
     companyName: "TechTalks",
+    stack: [
+      "ASP.NET Core",
+      "Entity Framework Core",
+      "PostgreSQL",
+      "JWT",
+      "React",
+    ],
     bullets: [
       " Led a team of 6 developers as Team Lead, facilitating Scrum ceremonies and managing sprint planning and task tracking in Jira across 4 sprints to ensure coordinated execution and on-time delivery",
       "Designed and developed scalable frontend features using Next.js, React, and Tailwind CSS, enhancing UI responsiveness and reducing page load times by 30% ",
@@ -37,6 +58,13 @@ const experiences = [
     startDate: "Aug 2025",
     endDate: "Oct 2025",
     companyName: "Vanrise",
+    stack: [
+      "ASP.NET Core",
+      "Entity Framework Core",
+      "PostgreSQL",
+      "JWT",
+      "React",
+    ],
     bullets: [
       "Developed a reservation system with integrated client management, supporting 500+ client records and streamlining booking operations by 40% ",
       "Built a responsive and user-friendly frontend using HTML5, CSS3, JavaScript, Bootstrap, and AngularJS, reducing user interaction barriers by 30% across devices ",

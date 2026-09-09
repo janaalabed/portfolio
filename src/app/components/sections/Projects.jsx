@@ -11,30 +11,31 @@ function GithubIcon(props) {
   );
 }
 
-export default function Project() {
+export default function Projects() {
   return (
     <section id="projects" className="border-t border-border py-12 md:py-24">
-      <div className="mx-auto max-w-[1200px] px-6">
-        <h1 className="font-heading text-h3 font-semibold text-foreground">
+      <div className="mx-auto max-w-[1200px] px-4 sm:px-6">
+        <h2 className="font-heading text-h3 font-semibold text-foreground">
           Projects
-        </h1>
+        </h2>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((item, index) => (
             <Reveal key={index} delay={index * 100}>
               <div className="flex h-full flex-col overflow-hidden rounded-xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <div className="relative h-44 w-full">
+                <div className="relative h-40 w-full sm:h-44">
                   <Image
                     src={item.imageURL}
-                    alt={item.Name}
+                    alt={`Screenshot of ${item.name} interface`}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover"
                   />
                 </div>
 
-                <div className="flex flex-1 flex-col p-6">
+                <div className="flex flex-1 flex-col p-5 sm:p-6">
                   <h3 className="font-heading text-h3 font-medium text-foreground">
-                    {item.Name}
+                    {item.name}
                   </h3>
                   <p className="mt-2 flex-1 text-body text-muted-foreground">
                     {item.description}
@@ -51,20 +52,30 @@ export default function Project() {
                     ))}
                   </div>
 
-                  <div className="mt-6 flex gap-4">
+                  <div className="mt-6 flex flex-wrap gap-3">
                     {item.liveDemo && (
                       <a
                         href={item.liveDemo}
-                        className="flex items-center gap-1 text-label text-primary hover:underline"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group inline-flex items-center gap-2 rounded-lg border border-border bg-card px-3.5 py-2 text-label font-medium text-muted-foreground transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-accent hover:text-foreground"
                       >
-                        <ExternalLink size={14} /> Live demo
+                        <ExternalLink
+                          size={14}
+                          className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                        />
+                        Live Demo
                       </a>
                     )}
+
                     <a
                       href={item.githubRepo}
-                      className="flex items-center gap-1 text-label text-muted-foreground hover:text-primary"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center gap-2 rounded-lg border border-border bg-card px-3.5 py-2 text-label font-medium text-muted-foreground transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-accent hover:text-foreground"
                     >
-                      <GithubIcon className="h-3.5 w-3.5" /> Source Code
+                      <GithubIcon className="h-3.5 w-3.5 transition-colors duration-200 group-hover:text-primary" />
+                      Source Code
                     </a>
                   </div>
                 </div>

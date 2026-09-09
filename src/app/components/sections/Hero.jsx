@@ -6,12 +6,13 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="mx-auto flex max-w-[1200px] flex-col items-center gap-3 px-6 pb-24 pt-32 text-center md:pt-40"
+      className="mx-auto flex max-w-[1200px] flex-col items-center gap-3 px-4 pb-16 pt-28 text-center sm:px-6 sm:pb-24 sm:pt-32 md:pt-40"
     >
-      <div className="flex items-center gap-4 opacity-0 animate-fade-up">
-        <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full border border-border">
+      <div className="flex items-center gap-3 opacity-0 animate-fade-up sm:gap-4">
+        <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border border-border sm:h-16 sm:w-16">
           <Image
             fill
+            priority
             alt="Jana Al Abed"
             src="/images/personalPhoto.jpeg"
             className="object-cover scale-125"
@@ -22,7 +23,7 @@ export default function Hero() {
         </span>
       </div>
 
-      <h1 className="font-heading text-hero font-semibold text-foreground opacity-0 animate-fade-up [animation-delay:150ms]">
+      <h1 className="font-heading text-3xl font-semibold text-foreground opacity-0 animate-fade-up [animation-delay:150ms] sm:text-4xl md:text-hero">
         Full-stack developer
       </h1>
 
@@ -35,7 +36,7 @@ export default function Hero() {
         href="#projects"
         className={cn(
           buttonVariants({ size: "lg" }),
-          "bg-primary text-primary-foreground hover:bg-primary/90 opacity-0 animate-fade-up [animation-delay:450ms]",
+          "bg-primary text-primary-foreground hover:bg-primary/90 opacity-0 animate-fade-up [animation-delay:450ms] w-full sm:w-auto",
         )}
       >
         My projects

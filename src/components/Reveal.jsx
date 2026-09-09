@@ -6,6 +6,7 @@ export default function Reveal({ children, delay = 0, className }) {
   const [ref, inView] = useInView();
 
   return (
+    // unobserve after first reveal — animation should only play once per element
     <div
       ref={ref}
       style={{ transitionDelay: `${delay}ms` }}

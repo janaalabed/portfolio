@@ -3,12 +3,12 @@ import skills from "../../data/skills";
 export default function Skills() {
   return (
     <section id="skills" className="py-12 md:py-24">
-      <div className="mx-auto max-w-[1200px] px-6">
-        <h1 className="font-heading text-h3 font-semibold text-foreground">
+      <div className="mx-auto max-w-[1200px] px-4 sm:px-6">
+        <h2 className="font-heading text-h3 font-semibold text-foreground">
           Skills
-        </h1>
+        </h2>
 
-        <div className="mt-12 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-x-6 gap-y-8 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-10 lg:grid-cols-4">
           {skills.map((item, index) => (
             <div key={index}>
               <h3 className="font-heading text-h3 font-medium text-foreground">

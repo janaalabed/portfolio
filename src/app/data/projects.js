@@ -1,7 +1,7 @@
 const projects = [
   {
     imageURL: "/images/Help Desk.avif",
-    Name: "IT help desk",
+    name: "IT help desk",
     description:
       "An IT Help Desk & Ticketing Management System for managing support requests, ticket workflows, role-based access, and internal IT operations",
     stack: ["React", "Tailwind CSS", "ASP.NET Web Api", "Entity Framework"],
@@ -11,7 +11,7 @@ const projects = [
 
   {
     imageURL: "/images/jobify.jpg",
-    Name: "Jobify",
+    name: "Jobify",
     description:
       "A job-matching platform connecting students and job seekers with internship opportunities, while letting companies post openings and manage applications",
     stack: ["Next.js", "React", "Tailwind CSS", "PostgreSQL"],
@@ -20,7 +20,7 @@ const projects = [
   },
   {
     imageURL: "/images/oneHand.png",
-    Name: "OneHand",
+    name: "OneHand",
     description:
       "A community platform for sharing, discovering, and exchanging unused items, connecting people who have things to give with those who need them.",
     stack: ["Next.js", "React", "Tailwind CSS", "PostgreSQL"],

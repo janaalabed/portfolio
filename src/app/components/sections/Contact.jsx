@@ -42,11 +42,11 @@ export default function Contact() {
 
   return (
     <section id="contact" className="border-t border-border py-12 md:py-24">
-      <div className="mx-auto grid max-w-[1200px] gap-12 px-6 md:grid-cols-2">
+      <div className="mx-auto grid max-w-[1200px] gap-10 px-4 sm:px-6 md:grid-cols-2 md:gap-12">
         <div>
-          <h1 className="font-heading text-h3 font-semibold text-foreground">
+          <h2 className="font-heading text-h3 font-semibold text-foreground">
             Let&apos;s connect
-          </h1>
+          </h2>
           <p className="mt-4 text-body text-muted-foreground">
             Interested in working together?
           </p>
@@ -56,7 +56,8 @@ export default function Contact() {
               href="mailto:janaalabed0101@gmail.com"
               className="flex items-center gap-3 text-body text-muted-foreground hover:text-primary"
             >
-              <Mail size={18} /> janaalabed0101@gmail.com
+              <Mail size={18} />{" "}
+              <span className="break-all">janaalabed0101@gmail.com</span>
             </a>
             <a
               href="http://www.linkedin.com/in/jana-al-abed-97772335a"
@@ -106,7 +107,7 @@ export default function Contact() {
           <Button
             type="submit"
             disabled={status === "sending"}
-            className="bg-primary text-primary-foreground hover:bg-primary/90"
+            className="w-full bg-primary text-primary-foreground hover:bg-primary/90 sm:w-auto"
           >
             {status === "sending" ? "Sending..." : "Send message"}
           </Button>
