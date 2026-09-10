@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ExternalLink } from "lucide-react";
+import { ArrowUpRight, ExternalLink } from "lucide-react";
 import Reveal from "../../../components/Reveal";
 import projects from "../../data/projects";
 
@@ -53,6 +53,19 @@ export default function Projects() {
                   </div>
 
                   <div className="mt-6 flex flex-wrap gap-3">
+                    {item.caseStudyURL && (
+                      <a
+                        href={item.caseStudyURL}
+                        className="group inline-flex items-center gap-2 rounded-lg border border-primary/40 bg-primary/10 px-3.5 py-2 text-label font-medium text-primary transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary/20"
+                      >
+                        <ArrowUpRight
+                          size={14}
+                          className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                        />
+                        Explore Project
+                      </a>
+                    )}
+
                     {item.liveDemo && (
                       <a
                         href={item.liveDemo}
