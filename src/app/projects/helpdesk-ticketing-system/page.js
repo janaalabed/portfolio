@@ -6,12 +6,11 @@ import Screenshots from "@/app/components/caseStudyComponents/Screenshots";
 export default function ProjectCaseStudy() {
   return (
     <>
-      <h1>here we go ! </h1>
+      <BackToProjects />
       <Header />
+      <Screenshots />
       <Role />
       <Architecture />
-      <Screenshots />
-      <BackToProjects />
     </>
   );
 }
