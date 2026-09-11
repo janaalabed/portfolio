@@ -17,35 +17,26 @@ export default function About() {
         <Reveal>
           <div className="mt-6 max-w-[70ch] space-y-5 text-body text-muted-foreground">
             <p>
-              I&apos;m a full-stack developer who works comfortably across the
-              entire stack — from designing a PostgreSQL schema to shipping the
-              React interface that sits on top of it.
+              I&apos;m a full-stack developer who&apos;s comfortable owning a
+              project end to end, from designing the database schema to shipping
+              the interface that sits on top of it.
             </p>
             <p>
-              At Integrated Digital Systems, I built a full-stack IT HelpDesk
-              and Ticketing Management System from scratch: a ten-table ERD, 30+
-              API endpoints in ASP.NET Core with Entity Framework Core, and
-              JWT-based authentication with role-based access control across
-              four user roles. I designed the visual system and role-scoped
-              dashboards myself, then debugged the stack end to end — from EF
-              Core relationship ambiguity to BCrypt hashing issues in
-              migrations. I&apos;ve also led product delivery, not just written
-              code.
+              At Integrated Digital Systems, I built an IT Help Desk and
+              Ticketing System from scratch: a ten-table schema, 30+ API
+              endpoints in ASP.NET Core, and role-based access across four user
+              types, designed, built, and debugged solo, layer by layer. At
+              TechTalks, I led a 5-person team through Jobify, a job-matching
+              platform, from kickoff to production in 8 weeks, running Scrum
+              ceremonies and owning the CI/CD pipeline along the way.
             </p>
             <p>
-              At TechTalks, I led a 5-person team building Jobify, a
-              job-matching platform for students and companies, from kickoff to
-              production in 8 weeks — running Scrum ceremonies, managing 40+
-              Jira tickets, and owning the CI/CD pipeline and GitHub workflow.
-              Separately, I built OneHand, a community platform for sharing
-              unused belongings, to explore product ideas with real social
-              impact.
-            </p>
-            <p>
-              My stack: React, Next.js, ASP.NET Core, PostgreSQL, Tailwind CSS,
-              and Supabase — with a habit of understanding a system deeply
-              enough to trace a bug through every layer it touches, not just the
-              one where it surfaces.
+              My stack is React, Next.js, ASP.NET Core, PostgreSQL, Tailwind
+              CSS, and Supabase, but the habit that matters more than any single
+              tool is tracing a problem through every layer it touches, not just
+              the one where it happens to surface. I hold a Computer Science
+              degree from the Lebanese University and 700+ hours of hands-on
+              internship experience turning that habit into shipped work.
             </p>
           </div>
         </Reveal>

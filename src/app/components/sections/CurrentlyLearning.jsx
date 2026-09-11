@@ -8,7 +8,7 @@ const items = [
   {
     tech: ".NET",
     focus: "Leveling up",
-    detail: "Sharpening EF Core query performance and minimal API design.",
+   detail: "Deepening ASP.NET Core Web API architecture; middleware pipelines and controller design.",
   },
 ];
 

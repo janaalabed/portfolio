@@ -15,10 +15,10 @@ export default function Portfolio() {
         <Navbar />
         <Hero />
         <About />
+        <Projects />
         <Experience />
         <Skills />
-        <CurrentlyLearning/>
-        <Projects />
+        <CurrentlyLearning />
         <Contact />
         <Footer />
       </div>
