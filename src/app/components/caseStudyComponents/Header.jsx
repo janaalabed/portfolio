@@ -37,7 +37,7 @@ export default function Header() {
           A full-stack, enterprise-style help desk built for internal IT support
           teams. Employees log issues, agents work through a queue, managers
           watch the load across the team, and admins keep the system itself in
-          order — all inside one role-aware application.
+          order; all inside one role-aware application.
         </p>
 
         {/* Problem */}

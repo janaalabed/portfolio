@@ -18,6 +18,21 @@ const projects = [
   },
 
   {
+    imageURL: "/images/oneHand.png",
+    name: "OneHand",
+    description:
+      "A community platform for sharing, discovering, and exchanging unused items, connecting people who have things to give with those who need them.",
+    stack: [
+      "Next.js",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Supabase",
+      "Git & Github",
+    ],
+    liveDemo: "https://onehand-community.vercel.app",
+    githubRepo: "https://github.com/janaalabed/donation-platform.git",
+  },
+  {
     imageURL: "/images/jobify.jpg",
     name: "Jobify",
     description:
@@ -32,21 +47,6 @@ const projects = [
     ],
     liveDemo: "https://jobify-bice-five.vercel.app/",
     githubRepo: "https://github.com/janaalabed/techtalks-Jobify-teamD.git",
-  },
-  {
-    imageURL: "/images/oneHand.png",
-    name: "OneHand",
-    description:
-      "A community platform for sharing, discovering, and exchanging unused items, connecting people who have things to give with those who need them.",
-    stack: [
-      "Next.js",
-      "Tailwind CSS",
-      "PostgreSQL",
-      "Supabase",
-      "Git & Github",
-    ],
-    liveDemo: "https://onehand-community.vercel.app",
-    githubRepo: "https://github.com/janaalabed/donation-platform.git",
   },
 ];
 export default projects;
