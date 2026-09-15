@@ -14,7 +14,7 @@ export default function Hero() {
             fill
             priority
             alt="Jana Al Abed"
-            src="/images/personalPhoto.jpeg"
+            src="/images/personal.png"
             className="object-cover scale-125"
           />
         </div>
