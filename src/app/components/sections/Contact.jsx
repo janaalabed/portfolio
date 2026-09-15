@@ -23,21 +23,73 @@ function LinkedinIcon(props) {
   );
 }
 
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function validateForm({ name, email, message }) {
+  const errors = {};
+
+  if (!name.trim()) {
+    errors.name = "Name is required.";
+  }
+
+  if (!email.trim()) {
+    errors.email = "Email is required.";
+  } else if (!EMAIL_PATTERN.test(email.trim())) {
+    errors.email = "Enter a valid email address.";
+  }
+
+  if (!message.trim()) {
+    errors.message = "Message is required.";
+  } else if (message.trim().length < 10) {
+    errors.message = "Message should be at least 10 characters.";
+  }
+
+  return errors;
+}
+
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState("idle");
+  const [errors, setErrors] = useState({});
+
+  function handleFieldChange(field, value, setter) {
+    setter(value);
+    if (errors[field]) {
+      setErrors((prev) => {
+        const next = { ...prev };
+        delete next[field];
+        return next;
+      });
+    }
+  }
 
   async function handleFormSubmission(e) {
     e.preventDefault();
+
+    const validationErrors = validateForm({ name, email, message });
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+
     setStatus("sending");
     const response = await fetch("/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email, message }),
     });
-    setStatus(response.ok ? "sent" : "error");
+
+    if (response.ok) {
+      setStatus("sent");
+      setName("");
+      setEmail("");
+      setMessage("");
+      setErrors({});
+    } else {
+      setStatus("error");
+    }
   }
 
   return (
@@ -74,15 +126,21 @@ export default function Contact() {
           </div>
         </div>
 
-        <form onSubmit={handleFormSubmission} className="space-y-5">
+        <form onSubmit={handleFormSubmission} noValidate className="space-y-5">
           <div className="space-y-2">
             <Label htmlFor="name">Name</Label>
             <Input
               id="name"
               value={name}
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) =>
+                handleFieldChange("name", e.target.value, setName)
+              }
               placeholder="Your name"
+              aria-invalid={Boolean(errors.name)}
             />
+            {errors.name && (
+              <p className="text-label text-destructive">{errors.name}</p>
+            )}
           </div>
           <div className="space-y-2">
             <Label htmlFor="email">Email</Label>
@@ -90,19 +148,31 @@ export default function Contact() {
               id="email"
               type="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) =>
+                handleFieldChange("email", e.target.value, setEmail)
+              }
               placeholder="Your email"
+              aria-invalid={Boolean(errors.email)}
             />
+            {errors.email && (
+              <p className="text-label text-destructive">{errors.email}</p>
+            )}
           </div>
           <div className="space-y-2">
             <Label htmlFor="message">Message</Label>
             <Textarea
               id="message"
               value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              onChange={(e) =>
+                handleFieldChange("message", e.target.value, setMessage)
+              }
               placeholder="Your message"
               rows={5}
+              aria-invalid={Boolean(errors.message)}
             />
+            {errors.message && (
+              <p className="text-label text-destructive">{errors.message}</p>
+            )}
           </div>
           <Button
             type="submit"
