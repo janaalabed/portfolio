@@ -15,7 +15,7 @@ export async function POST(req) {
       to: "janaalabed0101@gmail.com",
       reply_to: email,
       subject: `New message from ${name}`,
-      text: message,
+      text: `From: ${name}: ${email}\n\n${message}`,
     });
     return Response.json({ success: true });
   } catch (error) {
